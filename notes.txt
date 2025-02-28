@@ -1,0 +1,24 @@
+// create a virtual env (only for first time)
+python -m venv .venv
+
+// activate the virtual env
+.venv\Scripts\activate
+
+// create poetry project from scratch
+poetry new basicmultiagent --name app
+cd basicmultiagent
+poetry add langchain langgraph langchain-openai
+// note: had to change python version to ">=3.11,<4.0" in pyproject.toml to get it to work
+
+pip install python-dotenv typing
+poetry add langchain_community
+
+
+
+// We can now run the app from terminal
+cd app
+poetry run python3 multiagent.py
+
+pip install beautifulsoup4
+
+
